@@ -1,0 +1,88 @@
+.contenedor{
+    width: 90vw;
+    height: 100vh;
+    margin:auto;
+    display: grid;
+    grid-template-rows: 150px 80px 600px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+    "int int enc enc enc enc enc ico ico "
+    "nav nav nav nav nav nav nav nav nav"
+    "lat lat map map map map map lat2 lat2"
+    "val val val val val val val log log"
+    ;
+}
+/* no usar la misma clase en dos elementos diferentes a la vez */
+.inte{
+    grid-area: int;
+}
+.iconos{
+    grid-area: ico;
+
+    i{
+        font-size: 30px;
+    }
+}
+
+
+.contenedor > *[grid-area="ico"] {
+    justify-items: end;
+  }
+
+nav{
+    grid-area: nav;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 3px solid black;
+}
+.li-menu{
+    float: left;
+    width: 100%;
+}
+.li-menu a{
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.li-menu a:hover{
+    background-color: rgb(156, 215, 255);
+    color: rgb(255, 255, 255);
+}
+
+.lateral{
+    grid-area: lat;
+}
+.lateral2{
+    grid-area: lat2;
+}
+.mapa{
+    grid-area: map;
+}
+
+#valores{
+    grid-area: val;
+}
+#logo2{
+    grid-area: log;
+
+    img{
+        width: 100%;
+    }
+}
+.borde-lapiz {
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-image: url('../img/borde.png') 20 round; /* Reemplaza 'lapiz.png' con la ruta de tu imagen de textura */
+    padding: 5px; /* Ajusta el padding según el grosor deseado del borde */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+}
