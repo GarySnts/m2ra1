@@ -86,3 +86,26 @@ nav{
     padding: 5px; /* Ajusta el padding según el grosor deseado del borde */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
 }
+
+@media (max-width: 778px){
+    .contenedor{
+        margin:auto;
+        width: 90vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 150px 80px 600px 600px 600px 900px 200px;
+        grid-template-areas: 
+        "int int ico ico "
+        "nav nav nav nav"
+        "lat lat lat lat"
+        "lat2 lat2 lat2 lat2"
+        "map map map map"
+        "val val val val"
+        "log log log log"
+        ;
+
+        body{
+            background-color: crimson;
+        }
+    }
+}
